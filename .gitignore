@@ -1,0 +1,25 @@
+# ─── Your real data — never commit ───
+# (root-level, where sync.py lives — typical workspace location)
+/contacts.csv
+/dunbar.config.json
+/.env
+
+# Root-level circle folders (with real people in them)
+/0[1-5]_*_*/
+
+# Keep the demo template/ tree (Alice / Bob / Carol / David / Eve)
+!/template/
+
+# ─── Python ───
+__pycache__/
+*.pyc
+.venv/
+venv/
+.python-version
+
+# ─── OS / editors ───
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

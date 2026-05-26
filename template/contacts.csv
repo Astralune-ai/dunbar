@@ -1,0 +1,6 @@
+昵称,真实姓名,生日,公司,职位,行业,身份,介绍人,电话,微信,Email,LinkedIn,Discord,社交媒体,家庭地址,办公地址,圈层,上次见面,标签,详档,备注
+Alice,Alice Example,1990-03-12,,,,partner,,+1-555-0101,,alice@example.com,,,,Sydney,,核心,2026-05-25,partner;Sydney,01_核心_core/Alice/Alice.md,fictional sample row — replace with your own
+Bob,Robert Sample,1989-07-04,Sample Co,Senior Engineer,Software,best friend,,+1-555-0102,,bob@example.com,https://www.linkedin.com/in/bob-sample/,,,Melbourne,Melbourne CBD,挚友,2026-05-10,uni;tech;sounding-board,02_挚友_inner/Bob/Bob.md,met in undergrad — fictional sample
+Carol,Carol Demo,,Demo Studio,Designer,Creative,collaborator,Bob,+1-555-0103,,carol@example.com,,,@caroldemo,,Brisbane,常联系,2026-04-22,design;collaborator;referred-by-Bob,03_常联系_regular/Carol/Carol.md,fictional sample row
+David,,1995-11-20,,,,neighbor,,+1-555-0104,,,,,,Sydney,,熟人,2026-03-15,neighbor;Sydney,04_熟人_casual/David/David.md,fictional sample row
+Eve,Eve Placeholder,,,,,old classmate,,+1-555-0105,,eve@example.com,,,,Perth,,弱联系,2025-12-20,classmate;annual,05_弱联系_weak/Eve/Eve.md,sees once a year around Christmas — fictional sample
