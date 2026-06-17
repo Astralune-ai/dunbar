@@ -151,9 +151,9 @@ Expected: `✨ New (appended 1 row): + Alex (核心) → ...`
 #### Claude Code (the path of least resistance)
 
 ```bash
-# Install the two skills
+# Install the three skills
 mkdir -p ~/.claude/skills
-cp -r skills/contacts-sync skills/contacts-add ~/.claude/skills/
+cp -r skills/contacts-sync skills/contacts-add skills/contacts-event ~/.claude/skills/
 
 # Tell the skills where your workspace lives
 echo 'export DUNBAR_ROOT="'"$PWD"'"' >> ~/.zshrc
@@ -164,6 +164,7 @@ Now in any session you can say:
 
 - *"Add Alice to my contacts, she's my partner, lives in Sydney"* → triggers `contacts-add`
 - *"I just moved David to inner circle, sync"* → triggers `contacts-sync`
+- *"Log the mess where Sam's flatmate supposedly extorted money from him"* → triggers `contacts-event`
 - *"Who do I know in Melbourne?"* → grep over CSV, no skill needed
 
 #### Cursor / Codex / generic agent
@@ -244,8 +245,9 @@ See [docs/roadmap.md](docs/roadmap.md) for the design sketch — and for what we
 |---|---|
 | [`contacts-sync`](skills/contacts-sync/SKILL.md) | Reconcile folders ↔ CSV; rewrite per-person summary blocks. |
 | [`contacts-add`](skills/contacts-add/SKILL.md) | Add a new person from natural language. Includes strict "don't fabricate" + "organization = only if it's actually happening" hard rules. |
+| [`contacts-event`](skills/contacts-event/SKILL.md) | Log a complex, multi-party, evolving situation around a contact (a dispute, a crisis, a "two sides tell opposite stories" tangle) as a layered event dossier + chronology, kept separate from the clean profile. Five-layer tagging (firsthand / secondhand / hypothesis / commentary / to-confirm) keeps fact and inference from bleeding together. |
 
-Both are plain markdown — drop them in Claude Code (`~/.claude/skills/`), paste them into Cursor project rules, or pipe them into any agent's system prompt.
+All three are plain markdown — drop them in Claude Code (`~/.claude/skills/`), paste them into Cursor project rules, or pipe them into any agent's system prompt.
 
 ## Contributing
 
@@ -382,9 +384,9 @@ python3 sync.py
 #### Claude Code（最省事的方式）
 
 ```bash
-# 安装两个 skill
+# 安装三个 skill
 mkdir -p ~/.claude/skills
-cp -r skills/contacts-sync skills/contacts-add ~/.claude/skills/
+cp -r skills/contacts-sync skills/contacts-add skills/contacts-event ~/.claude/skills/
 
 # 告诉 skill 你的工作区在哪
 echo 'export DUNBAR_ROOT="'"$PWD"'"' >> ~/.zshrc
@@ -395,6 +397,7 @@ source ~/.zshrc
 
 - *"加 Alice 到联系人，她是我女朋友，住悉尼"* → 触发 `contacts-add`
 - *"David 挪到挚友圈了，同步一下"* → 触发 `contacts-sync`
+- *"把 Sam 跟室友那摊钱的破事记一下"* → 触发 `contacts-event`
 - *"我认识的人里有谁在墨尔本？"* → AI 直接 grep CSV，不需要 skill
 
 #### Cursor / Codex / 通用 agent
