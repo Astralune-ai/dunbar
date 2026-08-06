@@ -214,7 +214,7 @@ See [docs/ai-integration.md](docs/ai-integration.md) for more.
 | 20 | 详档 | **Auto-computed: path to the .md profile.** |
 | 21 | 备注 | Free-form notes. |
 
-Full reference: [docs/schema.md](docs/schema.md). Customize the columns or circle names: see [docs/schema.md#customizing-the-columns](docs/schema.md#customizing-the-columns).
+Full reference: [docs/schema.md](docs/schema.md). Column names, circle names, the CSV filename and the shape of the generated summary block are all configurable from a single `dunbar.config.json` — no code edits: see [docs/schema.md#configuration](docs/schema.md#configuration).
 
 ## What dunbar is NOT
 
@@ -447,7 +447,7 @@ source ~/.zshrc
 | 20 | 详档 | **sync.py 自动算的 .md 路径。** |
 | 21 | 备注 | 杂项。 |
 
-完整参考：[docs/schema.md](docs/schema.md)。要自定义列名或圈层名：[docs/schema.md#customizing-the-columns](docs/schema.md#customizing-the-columns)。
+完整参考：[docs/schema.md](docs/schema.md)。列名、圈层名、CSV 文件名、生成的摘要块长什么样，全部由一个 `dunbar.config.json` 配置，不用改代码：[docs/schema.md#configuration](docs/schema.md#configuration)。
 
 ## dunbar 不是什么
 
